@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "la-htauk-bay-din",
-    "slug": "la-htauk-bay-din",
+    "name": "lat-htauk-bay-din",
+    "slug": "lat-htauk-bay-din",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -17,7 +17,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/mintheinkha.png",
         "backgroundColor": "#ffffff"
       }
     },
