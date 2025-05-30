@@ -1,3 +1,4 @@
+import Number from "@/components/Number";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { router, useLocalSearchParams } from "expo-router";
@@ -38,7 +39,6 @@ const number = () => {
 
   return (
     <View style={tw`flex-1 mt-4 bg-[#F5F5F5]`}>
-      {/* Header */}
       <View style={tw`pt-4 px-4`}>
         <TouchableWithoutFeedback onPress={() => router.back()}>
           <Ionicons
@@ -50,10 +50,8 @@ const number = () => {
         </TouchableWithoutFeedback>
       </View>
 
-      {/* Main Content */}
       <View style={tw`flex-1 items-center justify-center px-6`}>
         <View style={tw`w-full max-w-md`}>
-          {/* Question Card */}
           <View
             style={tw`bg-white p-3 rounded-xl shadow-md mb-8 border border-[#5C271F]/10`}
           >
@@ -62,18 +60,7 @@ const number = () => {
             </Text>
           </View>
 
-          {/* Number Grid */}
-          <View style={tw`flex-row flex-wrap justify-center gap-2`}>
-            {number.map((num: any, index: number) => (
-              <TouchableWithoutFeedback key={index} onPress={clickHandling}>
-                <View
-                  style={tw`w-10 h-10 bg-[#5C271F] shadow-lg flex justify-center items-center rounded-full`}
-                >
-                  <Text style={tw`text-white text-sm font-medium`}>{num}</Text>
-                </View>
-              </TouchableWithoutFeedback>
-            ))}
-          </View>
+          <Number number={number} clickHandling={clickHandling} />
         </View>
       </View>
 
